@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class DemoController {
 
-    // ¸ù¾İ»·¾³¶ÁÈ¡²»Í¬µÄÊôĞÔÖµ
+    // æ ¹æ®ç¯å¢ƒè¯»å–ä¸åŒçš„å±æ€§å€¼
     @Value("${profiles.active}")
     private String profilesActive;
 

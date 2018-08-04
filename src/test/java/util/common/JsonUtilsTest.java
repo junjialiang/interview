@@ -17,7 +17,7 @@ public class JsonUtilsTest {
         String json = "{\n" +
                 "    \"user_name\":\"H__D\",\n" +
                 "    \"age\":11,\n" +
-                "    \"sex\":\"ÄÐ\"\n" +
+                "    \"sex\":\"ç”·\"\n" +
                 "}";
         Person person = JSON.parseObject(json, Person.class);
         Assert.assertEquals("H__D", person.getName());

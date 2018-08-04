@@ -24,9 +24,9 @@ public class HttpUtilsTest {
 //                "    \"deviceInfo\":\"\",\n" +
 //                "    \"openId\":\"obICEjqilYoEIxazbgw_H4N8dIuM\",\n" +
 //                "    \"checkName\":\"NO_CHECK\",\n" +
-//                "    \"reUserName\":\"∏ﬂ≥…\",\n" +
+//                "    \"reUserName\":\"È´òÊàê\",\n" +
 //                "    \"amount\":1,\n" +
-//                "    \"desc\":\"«¿∆± ß∞‹≈‚≥•øÓ\"\n" +
+//                "    \"desc\":\"Êä¢Á•®Â§±Ë¥•ËµîÂÅøÊ¨æ\"\n" +
 //                "}";
 //        String response = HttpUtils.doPostWithJSON(url, json);
 //        Assert.assertTrue(response.length() > 0);
@@ -45,9 +45,9 @@ public class HttpUtilsTest {
                 "  <partner_trade_no>1220070501201709194837971279</partner_trade_no>\n" +
                 "  <openid>obICEjmvDgm6s2ScdnXank0FgNPk</openid>\n" +
                 "  <check_name>NO_CHECK</check_name>\n" +
-                "  <re_user_name>Õı∑Á</re_user_name>\n" +
+                "  <re_user_name>ÁéãÈ£é</re_user_name>\n" +
                 "  <amount>2000</amount>\n" +
-                "  <desc>«¿∆± ß∞‹≈‚≥•øÓ</desc>\n" +
+                "  <desc>Êä¢Á•®Â§±Ë¥•ËµîÂÅøÊ¨æ</desc>\n" +
                 "  <spbill_create_ip>127.0.0.1</spbill_create_ip>\n" +
                 "</WeChatTransfersRequest>";
         String response = HttpUtils.doPostWithJSON(url, xml);
@@ -57,7 +57,7 @@ public class HttpUtilsTest {
     @Test
     public void testDoPostWithFile() {
         String url = "https://api.weixin.qq.com/cgi-bin/media/upload?access_token=DystR3TfrjarYLPI36Deww7CrzbZOImQpLktfzEuEEr2umhE-SaTitHAtlLrOu1QSwagpay80lQ5Srwm6dXMf5l9GycLnNLcerWmganr918DBBGep51a6J7M0z9oCBkRBIPiAKDVCJ&type=image";
-        String pathname = "d:\\Users\\liangjj\\Desktop\\service\\–°≥Ã–Ú≈˙¡ø◊¢≤·\\π•¬‘»œ÷§π´∫Ø\\078.jpg";
+        String pathname = "d:\\Users\\liangjj\\Desktop\\service\\Â∞èÁ®ãÂ∫èÊâπÈáèÊ≥®ÂÜå\\ÊîªÁï•ËÆ§ËØÅÂÖ¨ÂáΩ\\078.jpg";
         String response = HttpUtils.doPostWithFile(url, pathname, HttpContentType.JPEG);
         Assert.assertTrue(response.length() > 0);
     }
