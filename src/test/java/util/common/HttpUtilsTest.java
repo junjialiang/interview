@@ -15,22 +15,30 @@ public class HttpUtilsTest {
         Assert.assertTrue(response.length() > 0);
     }
 
-//    @Test
-//    public void testDoPostWithJSON() throws Exception {
-//        String url = "http://ws.officialaccounts.open.ctripcorp.com/wechatenterprisepayws/json/Transfers";
-//        String json = "{\n" +
-//                "    \"mchAppId\":\"24D6FEB46566BA92D7304299E765BD04\",\n" +
-//                "    \"mchId\":\"378476215E1EA60E4816E44128547762\",\n" +
-//                "    \"deviceInfo\":\"\",\n" +
-//                "    \"openId\":\"obICEjqilYoEIxazbgw_H4N8dIuM\",\n" +
-//                "    \"checkName\":\"NO_CHECK\",\n" +
-//                "    \"reUserName\":\"高成\",\n" +
-//                "    \"amount\":1,\n" +
-//                "    \"desc\":\"抢票失败赔偿款\"\n" +
-//                "}";
-//        String response = HttpUtils.doPostWithJSON(url, json);
-//        Assert.assertTrue(response.length() > 0);
-//    }
+    @Test
+    public void testDoPostWithJSON() throws Exception {
+        String url = "https://m.ctrip.com/restapi/soa2/10245/GetGlobalADListV4.json";
+        String json = "{\n" +
+                "    \"ChannelID\": \"8888\",\n" +
+                "    \"SystemCode\": \"9\",\n" +
+                "    \"DeviceInfo\": {\n" +
+                "        \"ScreenWidth\": 1920,\n" +
+                "        \"ScreenHeight\": 1080\n" +
+                "    },\n" +
+                "    \"GlobalBusinessInfoList\": [\n" +
+                "        {\n" +
+                "            \"BizType\": \"2208\",\n" +
+                "            \"PageCode\": 1\n" +
+                "        },\n" +
+                "        {\n" +
+                "            \"BizType\": \"2208\",\n" +
+                "            \"PageCode\": 7\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}";
+        String response = HttpUtils.doPostWithJSON(url, json);
+        Assert.assertTrue(response.length() > 0);
+    }
 
     @Test
     public void testDoPostWithXML() {

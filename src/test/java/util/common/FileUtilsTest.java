@@ -8,8 +8,6 @@ import util.resources.ResourcesUtils;
  * Created by liangjj on 2017/9/15.
  */
 public class FileUtilsTest {
-    private String pathname = "D:\\code\\logs\\hmall-common-info.log";
-
     @Test
     public void testIsExist() {
         boolean isExist1 = FileUtils.isExist(ResourcesUtils.getFilePath("test"));
@@ -20,14 +18,14 @@ public class FileUtilsTest {
 
     @Test
     public void testGetBytesFromFile() {
-        byte[] bytes = FileUtils.getBytes(pathname);
-//        Assert.assertTrue(bytes.length > 0);
+        byte[] bytes = FileUtils.getBytes(ResourcesUtils.getFilePath("test"));
+        Assert.assertTrue(bytes.length > 0);
     }
 
     @Test
     public void testGetFileName() {
-        String filename = FileUtils.getFileName(pathname);
-//        Assert.assertEquals("hmall-common-info.log", filename);
+        String filename = FileUtils.getFileName(ResourcesUtils.getFilePath("test"));
+        Assert.assertEquals("test", filename);
     }
 
     @Test
