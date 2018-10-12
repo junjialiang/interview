@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.thread;
 
 /**
  * 下列代码执行结果为（）
