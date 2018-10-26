@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic.extend;
 
 /**
  * 运行下面代码，输出的结果是（）

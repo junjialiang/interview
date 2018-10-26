@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic;
 
 /**
  * 关于如下程序的描述哪个是正确的？（ ）

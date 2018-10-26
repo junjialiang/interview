@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic;
 
 /**
  * 以下代码结果是什么？

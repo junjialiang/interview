@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic;
 
 /**
  * 顺序执行下列程序语句后，则b的值是（）

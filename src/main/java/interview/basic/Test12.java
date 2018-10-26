@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic;
 
 /**
  * 执行如下代码后输出结果为（ ）

@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic;
 
 /**
  * 给定以下JAVA代码，这段代码运行后输出的结果是（）

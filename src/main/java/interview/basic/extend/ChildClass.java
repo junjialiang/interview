@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic.extend;
 
 /**
  * 下列程序执行后结果为( )

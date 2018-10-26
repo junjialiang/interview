@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic.extend;
 
 /**
  * Test.main() 函数执行后的输出是（）

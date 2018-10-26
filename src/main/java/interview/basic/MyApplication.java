@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic;
 
 /**
  * 阅读如下代码。 请问，对语句行 test8.hello(). 描述正确的有（）

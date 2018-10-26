@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic.extend;
 
 /**
  * 以下代码执行的结果显示是多少（ ）？

@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic;
 
 /**
  * 下面是findSum（int m.int n）方法的定义，方法调用findSum（1，5）的返回结果是( )

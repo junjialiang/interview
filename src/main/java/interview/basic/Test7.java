@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic;
 
 /**
  * 下面这三条语句的输出结果分别是？ ( )

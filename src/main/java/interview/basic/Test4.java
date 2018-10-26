@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic;
 
 /**
  * 下面的程序 编译运行后，在屏幕上显示的结果是（）

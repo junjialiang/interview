@@ -1,4 +1,4 @@
-package interview.fundamental;
+package interview.basic;
 
 /**
  * 应用程序的main方法中有以下语句，则输出的结果( )
