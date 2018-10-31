@@ -1,4 +1,4 @@
-package interview.basic;
+package interview.basic.trycatch;
 
 /**
  * 执行如下代码后输出结果为（ ）
