@@ -1,6 +1,8 @@
 package interview.datastructure.linklist;
 
 
+import java.util.Hashtable;
+
 /**
  * 如何实现单链表的增删操作
  * Created by liangjunjia on 2019/3/29.
@@ -94,11 +96,67 @@ public class MyLinkedList {
         return head;
     }
 
+    /**
+     * 打印链表
+     */
     public void printList() {
         Node tmp = head;
         while (tmp != null) {
             System.out.println(tmp.data);
             tmp = tmp.next;
+        }
+    }
+
+    /**
+     * 从何从链表中删除重复数据
+     *
+     * @param head
+     */
+    public void deleteDuplecate(Node head) {
+        Hashtable<Integer, Integer> talbe = new Hashtable<>();
+        Node tmp = head;
+        Node pre = null;
+        while (tmp != null) {
+            if (talbe.containsKey(tmp.data)) {
+                pre.next = tmp.next;
+            } else {
+                talbe.put(tmp.data, 1);
+                pre = tmp;
+            }
+            tmp = tmp.next;
+        }
+    }
+
+    /**
+     * 如何实现链表的反转
+     *
+     * @param head
+     */
+    public void reverseIteratively(Node head) {
+        Node pReversedHead = head;
+        Node pNode = head;
+        Node pPrev = null;
+        while (pNode != null) {
+            Node pNext = pNode.next;
+            if (pNext == null) {
+                pReversedHead = pNode;
+            }
+            pNode.next = pPrev; // 指针反转
+            pPrev = pNode; // 将当前节点保存，以便下一次反转指向
+            pNode = pNext; // 指针移动到下一个节点
+        }
+        this.head = pReversedHead;
+    }
+
+    /**
+     * 如何从尾到头输入单链表
+     *
+     * @param pListHead
+     */
+    public void printListReversely(Node pListHead) {
+        if (pListHead != null) {
+            printListReversely(pListHead.next);
+            System.out.println(pListHead.data);
         }
     }
 
@@ -112,11 +170,12 @@ public class MyLinkedList {
         System.out.println("before order:");
         list.printList();
         list.orderList();
-
-        System.out.println(list.deleteNode(5));
-
         System.out.println("after order:");
         list.printList();
+
+        // 如何从尾到头输入单链表
+        System.out.println("从尾到头输入单链表:");
+        list.printListReversely(list.head);
     }
 }
 
