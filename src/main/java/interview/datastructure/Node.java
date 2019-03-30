@@ -1,11 +1,11 @@
-package interview.datastructure.linklist;
+package interview.datastructure;
 
 /**
  * Created by liangjunjia on 2019/3/29.
  */
-class Node {
-    Node next = null;
-    int data;
+public class Node {
+    public Node next = null;
+    public int data;
 
     public Node(int data) {
         this.data = data;

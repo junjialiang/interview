@@ -1,5 +1,6 @@
 package interview.datastructure.linklist;
 
+import interview.datastructure.Node;
 
 import java.util.Hashtable;
 
@@ -56,6 +57,18 @@ public class MyLinkedList {
             curNode = curNode.next;
             i++;
         }
+        return true;
+    }
+
+    // 如何在不知道头指针的情况下删除指定节点
+    public boolean deleteNode(Node n) {
+        if (n == null || n.next == null) {
+            return false;
+        }
+        int tmp = n.data; // 先交换才能操作指针
+        n.data = n.next.data;
+        n.next.data = tmp;
+        n.next = n.next.next;
         return true;
     }
 
@@ -160,12 +173,51 @@ public class MyLinkedList {
         }
     }
 
+    /**
+     * 如何寻找单链表的中间节点
+     *
+     * @param head
+     * @return
+     */
+    public Node searchMid(Node head) {
+        Node p = this.head;
+        Node q = this.head;
+        while (p != null && p.next != null && p.next.next != null) {
+            p = p.next.next;
+            q = q.next;
+        }
+        return q;
+    }
+
+    /**
+     * 如何检测一个链表是否有环
+     *
+     * @param head
+     * @return
+     */
+    public boolean isLoop(Node head) {
+        Node fast = head;
+        Node slow = head;
+        if (fast == null) {
+            return false;
+        }
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                return true;
+            }
+        }
+        return !(fast == null || fast.next == null);
+    }
+
     public static void main(String[] args) {
         MyLinkedList list = new MyLinkedList();
         list.addNode(5);
         list.addNode(3);
         list.addNode(1);
-        list.addNode(3);
+        list.addNode(6);
+        list.addNode(9);
         System.out.println("listlen=" + list.length());
         System.out.println("before order:");
         list.printList();
@@ -176,6 +228,20 @@ public class MyLinkedList {
         // 如何从尾到头输入单链表
         System.out.println("从尾到头输入单链表:");
         list.printListReversely(list.head);
+
+        // 如何寻找单链表的中间节点
+        System.out.println("寻找单链表的中间节点:");
+        System.out.println(list.searchMid(list.head).data);
+
+        // 如何检测一个链表是否有环
+        System.out.println("检测一个链表是否有环:");
+        System.out.println(list.isLoop(list.head));
+
+        // 如何在不知道头指针的情况下删除指定节点
+        System.out.println("在不知道头指针的情况下删除指定节点:");
+        list.printList();
+        System.out.println(list.deleteNode(list.head));
+        list.printList();
     }
 }
 
