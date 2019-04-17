@@ -1,4 +1,4 @@
-package interview.algorithm;
+package interview.algorithm.sort;
 
 /**
  * @Author: Junjia
